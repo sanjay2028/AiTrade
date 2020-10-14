@@ -1,26 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/**
+ * Author: Sanjay Kumar (Sanjay2028@gmail.com)
+ * Date Created: 10-13-2020
+ * Purpose: For rendering different rount content
+ */
+
+import React, {useEffect} from 'react';
+import AppLayout from './components/layout';
+import {BrowserRouter} from 'react-router-dom';
+import {Loader} from './components/utils'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <BrowserRouter><Loader /><AppLayout /></BrowserRouter>  
 }
 
 export default App;
