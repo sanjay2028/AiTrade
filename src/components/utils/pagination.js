@@ -21,17 +21,18 @@ const PageItem = ({label, isCurrent=false, isDisabled=false}) => {
 
 const AppPagination = () => {    
 
+    let paging_items = [];
     const total_pages = useSelector(state => state.listProducts.total_pages);
     const previous = useSelector(state => state.listProducts.previous);
     const next = useSelector(state => state.listProducts.next);
-
-    let paging_items = [];
-
-
-    if(total_pages){
-        for(let page = 1; page<= total_pages; page++){
+    
+    if(total_pages){        
+        for(let page = 1; page<= total_pages; page++)
             paging_items.push(<PageItem label={page} />)
-        }
+        
+        paging_items.unshift(<PageItem label="Previous" isDisabled={previous} />)
+        paging_items.push(<PageItem label="Next" isDisabled={next} />)
+
     }
 
     return !!total_pages? (
