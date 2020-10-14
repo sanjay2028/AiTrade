@@ -17,8 +17,8 @@ export default () => {
     }, [])
     
     let output = products.map((item, index) => 
-        <div className="col-12 col-md-6 col-lg-4">
-            <ProductItem key={`${item.id}`} {...item} />
+        <div key={`prd_${index}`} className="col-12 col-md-6 col-lg-4">
+            <ProductItem {...item} key={`product_id_${item.id}`} />
         </div>
     )
 

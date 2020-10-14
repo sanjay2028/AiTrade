@@ -15,13 +15,8 @@ const configVals = () => ({
 export default {    
     listProducts: () => {
         return axios.get(`${BASE_URL}/products?limit=100`, configVals())
-               .then(({data}) => {        
-                   console.log("Success", data);
-                   return data;
-               })
+               .then(({data}) =>  data)
                .catch(error => {                
-                console.log("failure", error);       
-                console.log("failure error response", error.response);       
                    if(typeof error.response == 'undefined'){                       
                         return Promise.reject(networkError); 
                    } else {
