@@ -40,7 +40,7 @@ ProductItem.propstypes = {
 }
 
 ProductItem.defaultProps = {
-    image : "https://dummyimage.com/600x400/55595c/fff",
+    image : product_image_placeholder,
     title: "New Product",
     description: PRODUCT_DEFAULT_EXCERPT,
     price: "0.00",

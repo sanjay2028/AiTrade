@@ -9,6 +9,7 @@ import React, {Fragment}  from 'react';
 import {BodyContent, Breadcrumbs, AppFooter, AppHeader} from '../common';
 import {Switch, Route} from 'react-router-dom';
 import routes from '../../routes';
+import ErrorPage from '../error';
 export default (props) => {
   return (
     <Fragment>
@@ -28,6 +29,7 @@ export default (props) => {
                     )} />
                 ) : (null);
               })}
+              <Route component={ErrorPage} />
             </Switch>
         </BodyContent>
         <AppFooter />
