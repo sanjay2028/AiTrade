@@ -14,8 +14,7 @@ export default () =>
         <div className="col">
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
-                    <li className="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li className="breadcrumb-item"><a href="category.html">Product</a></li>                    
+                    <li className="breadcrumb-item"><a href="/">Home</a></li>                    
                 </ol>
             </nav>
         </div>

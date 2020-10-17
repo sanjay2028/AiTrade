@@ -6,9 +6,11 @@
 
 import React from 'react';
 import ListProducts from './views/list-products';
+import SingleProduct from './views/single-products';
 
 const routes = [
   { path: '/', exact: true, name: 'Home', component : ListProducts },    
+  { path: '/product/:id', exact: true, name: 'Home', component : SingleProduct },    
 ];
 
 export default routes;

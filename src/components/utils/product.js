@@ -12,7 +12,7 @@ const ProductThumb = (props) =>
     
 
 const ProductItem =  ({image, title, description, price, id:product_id}) => {
-    title = title.length > 42? title.substr(0, 39) + "..." : title;
+    title = title.length > 38? title.substr(0, 35) + "..." : title;
     description = description.length > 150? description.substr(0, 147) + " ..." : description;
     return( 
         <div className="card mb-3">

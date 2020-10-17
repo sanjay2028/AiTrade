@@ -28,4 +28,23 @@ export default {
                    }       
                }); 
     },
+    fetchProductById: (payload) => {
+        return axios.get(`${BASE_URL}/products/${payload}`, configVals())
+               .then(({data}) =>  {
+                    console.log("response", data);
+                    return data;
+               })
+               .catch(error => {                
+                   console.log("error occurred")
+                   if(typeof error.response == 'undefined'){                       
+                        return Promise.reject(networkError); 
+                   } else {
+                        return Promise.reject({
+                            status_code : error.response.status,
+                            data : error.response.statusText,
+                            flash: error.response.statusText,
+                        });                        
+                   }       
+               }); 
+    },
 }
